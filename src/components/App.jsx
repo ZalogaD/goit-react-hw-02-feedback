@@ -1,5 +1,7 @@
 import React from 'react';
 import Statistics from './Statistics/Statistics';
+import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
+import Section from './Section/Section';
 
 class App extends React.Component {
   state = {
@@ -35,14 +37,19 @@ class App extends React.Component {
 
     return (
       <>
-    
-        <Statistics 
+        <Section title = "Reviews">
+          <FeedbackOptions options = {['good', 'neutral', 'bad']} onLeaveFeedback = {this.handleClick} />
+        </Section>
+
+          <Section title = "Statistics">
+            <Statistics 
                   good = {good}
                   neutral = {neutral}
                   bad = {bad}
                   totalFeedback = {totalFeedback}
                   positiveFeedbackPercentage = {positiveFeedbackPercentage}
-        />
+            />
+          </Section>
       </>
     );
   }
