@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StatCont = styled.div`
   width: 350px;
+  margin: auto;
 `;
 
 export const StatList = styled.ul`
